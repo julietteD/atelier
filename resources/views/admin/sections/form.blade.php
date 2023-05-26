@@ -16,7 +16,7 @@
 </div>
 
 @if ($section->image)
-    <img src="{{ asset('storage/' . $section->image) }}" class="max-h-52">
+    <img src="{{ asset('storage/' . $section->image) }}" class="max-h-52" style="min-height:100px; min-width:100px">
 @endif
 
 
