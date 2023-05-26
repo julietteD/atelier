@@ -23,6 +23,5 @@
             </li>
             @endforeach
         </ul>
-        <div>$sections->links()</div>
 
 </x-app-layout>
