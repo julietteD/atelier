@@ -23,6 +23,6 @@
             </li>
             @endforeach
         </ul>
-        <div>{{ $sections->links() }}</div>
+        <div>$sections->links()</div>
 
 </x-app-layout>
