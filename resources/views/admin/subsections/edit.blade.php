@@ -25,7 +25,7 @@
 	@foreach ($subsection->Subsectimages as $item)
 
 	<div class="relative mr-4" style="display:inline-block; margin: 10px; vertical-align:middle; width: 10%">
-		<img style="min-width:100%; display:block" src="{{ asset('storage/' . $item->image) }}">
+		<img style="min-width:100%; width:100px; height:100px; display:block" src="{{ asset('storage/' . $item->image) }}">
 		
 		<form action="{{ route('admin.subsectimages.destroy', $item) }}" method="post">
 			@csrf
