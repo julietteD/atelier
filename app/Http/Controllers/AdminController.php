@@ -18,7 +18,7 @@ class AdminController extends Controller
     }    
         
     public function subsections() {
-        return view('admin.subsections', ['subsections' => Subsections::orderBy('sections_id', 'order', 'asc')->paginate(15)]);
+        return view('admin.subsections', ['subsections' => Subsections::orderBy('sections_id', 'asc')->orderBy('order', 'asc')->paginate(15)]);
     }  
     
     public function about() {
