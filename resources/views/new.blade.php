@@ -16,7 +16,7 @@
         
             <h2>{{ $new->title }}</h2>
             <div class="wrapper">
-                <h3 class="date">{{ date('d m Y',strtotime($new->date)) }}</h3>
+                <h3 class="date">{{ date('d/m/Y',strtotime($new->date)) }}</h3>
                <div class="content fromWYSIWYG">{!! $new->body !!}</p>
 
 <p>&nbsp;</p>

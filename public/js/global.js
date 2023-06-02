@@ -5,7 +5,7 @@
 skrollr.init({
     smoothScrolling: false,
     mobileDeceleration: 0.004,
-    forceHeight: true
+    forceHeight: false
 
 });
 

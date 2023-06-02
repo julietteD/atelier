@@ -59,7 +59,7 @@
                 <div class="contentWrapper bubbleLink" style="background: url('/storage/{{ $new->image }}') center center / cover no-repeat rgb(255, 255, 255); cursor: pointer;">
                     <div class="textContent">
 						<h3>{{ $new->title }}</h3>
-						<span class="date">{{ date('d m Y',strtotime($new->date)) }}</span>
+						<span class="date">{{ date('d/m/Y',strtotime($new->date)) }}</span>
 						<div class="chapeau">
                             {!!  $new->intro !!} 
                         </div>
