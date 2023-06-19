@@ -32,14 +32,14 @@ Route::middleware('guest')->group(function () {
                 Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
             
-            Route::post('register', [RegisteredUserController::class, 'store']);
-                Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
-                            ->name('verification.notice');
+    
 });
 
 Route::middleware('auth')->group(function () {
    
-
+    Route::post('register', [RegisteredUserController::class, 'store']);
+    Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
+                ->name('verification.notice');
     
     Route::get('verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
                 ->middleware(['signed', 'throttle:6,1'])
