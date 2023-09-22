@@ -8,7 +8,7 @@
 
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-4">
                 <div class="p-6 bg-white border-b border-gray-200">
-                <h2 class="font-bold text-indigo-700">Photos  test(max width: 1000px)</h2>
+                <h2 class="font-bold text-indigo-700">Photos  (max width: 1000px)</h2>
 
 
 
@@ -18,8 +18,7 @@
 	@csrf
 	<input type="text" name="subsections_id" value="{{ $subsection->id }}" hidden>
 	<input type="file" name="image" class="block mt-1" >
-	<button type="submit" class="absolute -top-1 -right-1 h-6 w-6 text-white bg-red-500 rounded-full hover:bg-red-600 focus:outline-none">Ajouter</button>
-test
+	<button type="submit" class="focus:outline-none block bg-gray-800 hover:bg-gray-700 px-4 py-2 my-4 rounded-md text-white shadow-sm text-xs tracking-widest font-semibold">Ajouter</button>
 </form>
 
 
