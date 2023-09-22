@@ -32,7 +32,7 @@ class SubsectimagesController extends Controller
 
     public function destroy(Subsectimages $photo)
     {
-        //Storage::disk('public')->delete($photo->image);
+        Storage::disk('public')->delete($photo->image);
         $photo->delete();
         return back();
     }
