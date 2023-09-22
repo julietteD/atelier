@@ -15,6 +15,7 @@ class SubsectimagesController extends Controller
     public function store()
     {  
         $photo = Subsectimages::create(request()->validate([
+            'image' => ['required'],
             'subsections_id' => ['required', 'integer']
         ]));
         $photo->update(['image' => request('image')->store('uploads', 'public')]);
