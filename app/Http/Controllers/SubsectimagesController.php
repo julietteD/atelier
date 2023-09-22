@@ -19,7 +19,6 @@ class SubsectimagesController extends Controller
             'subsections_id' => ['required', 'integer']
         ]));
         $photo->update(['image' => request('image')->store('uploads', 'public')]);
-        $this->image($section);
 
         return back();
     }
