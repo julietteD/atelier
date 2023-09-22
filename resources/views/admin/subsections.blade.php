@@ -17,10 +17,10 @@
                 <p class="mr-3 text-sm text-gray-600 font-bold">Diapos : {{ $item->subsectimages->count() }}</p>
 
                 <a href="{{ route('admin.subsections.edit', $item) }}" class="text-blue-500 hover:text-blue-700">{{ Str::limit($item->title, 140) }}</a>
-               @if($item->subsectimages->count()==0) <form action="{{ route('admin.subsections.destroy', $item) }}" method="post" class="inline-block ml-auto"> @csrf @method('delete') 
+                <form action="{{ route('admin.subsections.destroy', $item) }}" method="post" class="inline-block ml-auto"> @csrf @method('delete') 
                     <button type="submit" class="font-light tracking-widest m-1 text-red-500 hover:text-red-700 text-xs focus:outline-none" onclick="return confirm('Are you sure you want to delete this item?')">DELETE</button>
                 </form>
-                @endif
+             
             </li>
             @endforeach
         </ul>
