@@ -8,16 +8,18 @@
 
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-4">
                 <div class="p-6 bg-white border-b border-gray-200">
-                <h2 class="font-bold text-indigo-700">Photos (max width: 1000px)</h2>
+                <h2 class="font-bold text-indigo-700">Photos  test(max width: 1000px)</h2>
 
 
 
 
 
-<form action="{{ route('admin.subsectimages.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('admin.subsectimages.store') }}" method="post" enctype="multipart/form-data">
 	@csrf
 	<input type="text" name="subsections_id" value="{{ $subsection->id }}" hidden>
-	<input type="file" name="image" class="block mt-1" onchange="this.form.submit()">
+	<input type="file" name="image" class="block mt-1" >
+	<button type="submit" class="absolute -top-1 -right-1 h-6 w-6 text-white bg-red-500 rounded-full hover:bg-red-600 focus:outline-none">Ajouter</button>
+test
 </form>
 
 
