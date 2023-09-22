@@ -14,12 +14,15 @@ class SubsectimagesController extends Controller
    
     public function store()
     {  
+        dd(request()->hasFile('image'));
         $photo = Subsectimages::create(request()->validate([
             'image' => ['required', 'image', 'max:2500', 'dimensions:max_width=1000'],
             'subsections_id' => ['required', 'integer']
         ]));
-     
+        dd($photo);
         $photo->update(['image' => request('image')->store('uploads', 'public')]);
+        $this->image($section);
+
         return back();
     }
 
@@ -35,5 +38,13 @@ class SubsectimagesController extends Controller
         Storage::disk('public')->delete($photo->image);
         $photo->delete();
         return back();
+    }
+
+    private function image($section) {
+        if (request()->hasFile('image')) {
+            if ($section->image) { Storage::disk('public')->delete($section->image); }
+            $section->update(['image' => request()->file('image')->store('uploads', 'public')]);
+           
+        }
     }
 }
