@@ -14,11 +14,10 @@ class SubsectimagesController extends Controller
    
     public function store()
     {  
-        dd(request());
         $photo = Subsectimages::create(request()->validate([
-            'image' => ['required', 'image', 'max:2500', 'dimensions:max_width=1000'],
             'subsections_id' => ['required', 'integer']
         ]));
+        
         dd($photo);
         $photo->update(['image' => request('image')->store('uploads', 'public')]);
         $this->image($section);
