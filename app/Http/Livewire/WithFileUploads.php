@@ -16,7 +16,6 @@ class UploadPhoto extends Component
         $this->validate([
             'photo' => 'image|max:1024', // 1MB Max
         ]);
- 
         $this->photo->store('photos');
     }
 }
