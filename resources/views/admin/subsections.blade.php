@@ -1,6 +1,6 @@
 <x-app-layout>
 
-        <a href="{{ route('admin.subsections.create') }}" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 inline-block rounded-md text-white text-xs tracking-widest font-semibold">NEW</a>
+        <a href="{{ route('admin.subsections.create') }}" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 inline-block rounded-md text-white text-xs tracking-widest font-semibold">NEW tests</a>
         <ul class="my-5">
             @foreach ($subsections as $item)
             <li class="py-2 flex flex-wrap items-center border-t border-gray-200 hover:bg-gray-50">
