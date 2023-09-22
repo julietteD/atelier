@@ -17,7 +17,7 @@
 <form action="{{ route('admin.subsectimages.store') }}" method="post" enctype="multipart/form-data">
 	@csrf
 	<input type="text" name="subsections_id" value="{{ $subsection->id }}" hidden>
-	<input type="file" name="image" class="block mt-1" >
+	<input type="file" name="image" id="image" class="block mt-1" >
 	<button type="submit" class="focus:outline-none block bg-gray-800 hover:bg-gray-700 px-4 py-2 my-4 rounded-md text-white shadow-sm text-xs tracking-widest font-semibold">Ajouter</button>
 </form>
 

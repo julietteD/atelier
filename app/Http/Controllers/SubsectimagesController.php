@@ -17,8 +17,6 @@ class SubsectimagesController extends Controller
         $photo = Subsectimages::create(request()->validate([
             'subsections_id' => ['required', 'integer']
         ]));
-        
-        dd($photo);
         $photo->update(['image' => request('image')->store('uploads', 'public')]);
         $this->image($section);
 
